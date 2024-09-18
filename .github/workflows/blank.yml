@@ -53,14 +53,7 @@ on:
         description: 'Optional value 1'
         required: false
         type: string
-      key-2:
-        description: 'Optional key 2'
-        required: false
-        type: string
-      value-2:
-        description: 'Optional value 2'
-        required: false
-        type: string 
+     
      
       
 
@@ -79,8 +72,7 @@ jobs:
         echo "VALUE=${{ inputs.value }}" >> $GITHUB_ENV
         echo "KEY-1=${{ inputs.value }}" >> $GITHUB_ENV
         echo "VALUE-1=${{ inputs.value }}" >> $GITHUB_ENV
-        echo "KEY-2=${{ inputs.value }}" >> $GITHUB_ENV
-        echo "VALUE-2=${{ inputs.value }}" >> $GITHUB_ENV
+      
        
 
 
@@ -94,8 +86,7 @@ jobs:
         echo "Value: $VALUE"
         echo "key-1: $KEY-1"
         echo "Value-1: $VALUE-1"
-        echo "key-2: $KEY-2"
-        echo "Value-2: $VALUE-2"
+        
        
 
     - name: Create GitHub Issue
@@ -113,8 +104,7 @@ jobs:
             const value = process.env.VALUE;
             const key-1 = process.env.KEY-1;
             const value-1 = process.env.VALUE-1;
-            const key-2 = process.env.KEY-2;
-            const value-2 = process.env.VALUE-2;
+           
            
 
 
