@@ -59,8 +59,7 @@ on:
 
 jobs:
   manage-secrets:
-    runs-on: generic
-
+    runs-on: ubuntu-latest
     steps:
     - name: Set up environment variables
       run: |
