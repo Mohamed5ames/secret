@@ -61,22 +61,7 @@ on:
         description: 'Optional value 2'
         required: false
         type: string 
-      key-3:
-        description: 'Optional key 3'
-        required: false
-        type: string
-      value-3:
-        description: 'Optional value 3'
-        required: false
-        type: string 
-      key-4:
-        description: 'Optional key 4'
-        required: false
-        type: string
-      value-4:
-        description: 'Optional value 4'
-        required: false
-        type: string 
+     
       
 
 jobs:
@@ -96,10 +81,7 @@ jobs:
         echo "VALUE-1=${{ inputs.value }}" >> $GITHUB_ENV
         echo "KEY-2=${{ inputs.value }}" >> $GITHUB_ENV
         echo "VALUE-2=${{ inputs.value }}" >> $GITHUB_ENV
-        echo "KEY-3=${{ inputs.value }}" >> $GITHUB_ENV
-        echo "VALUE-3=${{ inputs.value }}" >> $GITHUB_ENV
-        echo "KEY-4=${{ inputs.value }}" >> $GITHUB_ENV
-        echo "VALUE-4=${{ inputs.value }}" >> $GITHUB_ENV
+       
 
 
     - name: Print Environment Variables
@@ -114,10 +96,7 @@ jobs:
         echo "Value-1: $VALUE-1"
         echo "key-2: $KEY-2"
         echo "Value-2: $VALUE-2"
-        echo "key-3: $KEY-3"
-        echo "Value-3: $VALUE-3"
-        echo "key-4: $KEY-4"
-        echo "Value-4: $VALUE-4"
+       
 
     - name: Create GitHub Issue
       id: create_issue
@@ -136,10 +115,7 @@ jobs:
             const value-1 = process.env.VALUE-1;
             const key-2 = process.env.KEY-2;
             const value-2 = process.env.VALUE-2;
-            const key-3 = process.env.KEY-3;
-            const value-3 = process.env.VALUE-3;
-            const key-4 = process.env.KEY-4;
-            const value-4 = process.env.VALUE-4;
+           
 
 
             let issueTitle = `Secret Management: ${action} secret for ${tenant} in ${environment}`;
@@ -160,10 +136,7 @@ jobs:
             - Value-1: ${value-1}
             - Key-2: ${key-2}
             - Value-2: ${value-2}
-            - Key-3: ${key-3}
-            - Value-3: ${value-3}
-            - Key-4: ${key-4}
-            - Value-4: ${value-4}
+            
             `;
 
             const issue = await github.rest.issues.create({
